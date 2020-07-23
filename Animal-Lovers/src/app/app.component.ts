@@ -1,4 +1,6 @@
+import { MessageService } from './shared/services/message.service';
 import { Component } from '@angular/core';
+
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Animal-Lovers';
+  color :string;
+
+ constructor(public messageService: MessageService){}
+
+ 
 }
