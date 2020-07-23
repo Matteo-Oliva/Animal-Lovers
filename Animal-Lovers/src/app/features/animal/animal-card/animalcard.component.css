@@ -1,0 +1,45 @@
+* {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  
+  [class*='col-1-5'] {
+      
+      width: fit-content;
+      
+      display: -webkit-inline-flex;
+      
+      text-align: center;
+      max-width: auto;
+       
+       }
+  
+    .module {
+      border-radius: 20px;
+      width: 80%;
+      margin: 85px;      
+      max-width: 100%;
+      max-height: 100%;
+      display: block;
+      border: solid grey;
+    
+    }
+  
+    .module:hover {
+      background-color: #eee;
+      cursor: pointer;
+      color: #607d8b;
+    }
+     
+     .img {
+       border: whitesmoke solid;
+       border-radius: 20px;
+      
+     } 
+  
+     .module h4 {
+       position: relative;
+     }
+     
+    
