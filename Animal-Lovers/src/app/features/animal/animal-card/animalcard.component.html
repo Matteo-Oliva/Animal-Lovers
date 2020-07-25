@@ -8,6 +8,7 @@
       <h4>Razza:{{animal.breed}}</h4>
       <h4>Anni:{{animal.age}}</h4>
       <h4 class="stato">Stato:{{animal.isAdopted}}</h4>
+      <h4 [ngClass]="adoptedClass(animal)">{{isAdopted(animal)}}</h4>
       <h4>Voti:{{animal.rate}}</h4>
     </div>
     <div>

@@ -14,5 +14,11 @@ export class AnimalcardComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  isAdopted( animal: IAnimal ): string {
+		return animal.isAdopted ? 'Adottato' : 'In attesa di adozione';
+	}
 
+	adoptedClass( animal: IAnimal ): any {
+		return {adopted: animal.isAdopted,'non-adottato': !animal.isAdopted};
+	}
 }

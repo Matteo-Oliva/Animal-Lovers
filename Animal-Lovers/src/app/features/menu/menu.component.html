@@ -3,7 +3,14 @@
     <a routerLink="/home">Home</a> 
     <a routerLink="/animals">Animals</a>
     <a routerLink="/dashboard">Dashboard</a>  
-    <a class="login" routerLink="/login">Login</a>
+    <a class="login" routerLink="/login" *ngIf="!(isLogged$ | async); else logged">Login</a>
+
+    
+
+<ng-template #logged>
+        <div class="welcome">Welcome, {{ authenticationService.MOCKED_USERNAME}}</div>
+        <a class="login" (click)="authenticationService.logout()" >Logout</a>
+</ng-template>
   </nav>
   
   

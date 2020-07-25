@@ -1,7 +1,5 @@
-import { Observable,  } from 'rxjs';
-import { AnimalService } from './../services/animal.service';
 import { Component, OnInit } from '@angular/core';
-import { IAnimal } from 'src/app/shared/model/mock-files/animal';
+
 
 @Component({
   selector: 'app-dashboard',
@@ -10,17 +8,16 @@ import { IAnimal } from 'src/app/shared/model/mock-files/animal';
 })
 export class DashboardComponent implements OnInit {
 
-  animals$ :  Observable<Array<IAnimal>>;
+  
 
-  constructor(private animalService:AnimalService) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.getTopRated();
+    
   }
-  getTopRated():Observable<Array<IAnimal>> {
-    return this.animals$ = this.animalService.getHighRated(0,4);
+  
     
         
   }
 
-}
+

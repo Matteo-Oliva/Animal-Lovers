@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Subject } from 'rxjs';
+import { AuthenticationService } from '../services/authentication.service';
+
 
 @Component({
   selector: 'app-menu',
@@ -6,10 +9,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit {
+  isLogged$: Subject<boolean>;
 
-  constructor() { }
+  
+	constructor(
+		public authenticationService: AuthenticationService) {
+	}
 
-  ngOnInit(): void {
-  }
 
+	ngOnInit(): void {
+		this.isLogged$ = this.authenticationService.isLogged$();
+	}
 }

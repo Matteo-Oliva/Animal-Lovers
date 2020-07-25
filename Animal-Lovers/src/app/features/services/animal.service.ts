@@ -17,11 +17,8 @@ export class AnimalService {
 		return of(this.animals );
   }
 
-  getTopRated(elementNum : number) : Observable<Array<IAnimal>> {
-    return of( [...this.animals].sort((a,b) => b.rate - a.rate).slice(0,elementNum));
-  }
-
-  getHighRated(numElemStart: number, numElemStop: number): Observable<IAnimal[]> {
-     return of(Object.assign({},this.animals).sort((a, b) => b.rate - a.rate).slice(numElemStart, numElemStop));
-      }
+  topRated(numOfElements:number):Observable<Array<IAnimal>>{
+		return of([...this.animals].sort(( a, b )=> b.rate - a.rate).slice( 0, numOfElements ));
+	}
+  
 }

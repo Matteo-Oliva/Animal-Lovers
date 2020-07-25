@@ -1,0 +1,16 @@
+<!-- <div *ngIf='!autenticato'>{{errorMessage}}</div>
+ <div *ngIf='consentito'>{{loginMessage}}</div>   
+-->
+<div>
+<label for="userName">Username:</label>
+<input type="text" id="userId" placeholder="Username" [(ngModel)]="username">  
+
+<label for="password">Password:</label>
+<input type="text" id="password" placeholder="Password" [(ngModel)]="password">
+
+<button (click)="login()">Connect</button>
+<button (clicl)="cancel()">Cancel</button>
+</div> 
+<div *ngIf="invalidLogin">
+    <span>Error</span>
+  </div>

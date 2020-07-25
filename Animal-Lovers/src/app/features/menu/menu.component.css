@@ -59,3 +59,10 @@
     position: fixed;
     right: 50px;
   }   
+.welcome {
+  
+  position: fixed;
+    right: 180px;
+    color: #f2f2f2;
+
+}
